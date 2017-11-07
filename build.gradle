@@ -1,0 +1,19 @@
+version '1.0-SNAPSHOT'
+group 'com.onexip'
+
+wrapper.gradleVersion = '4.2.1'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile fileTree(dir: 'libs', include: '**.*')
+    compile group: 'org.jogamp.jogl', name: 'jogl-all-main', version: '2.3.2'
+    compile 'org.jogamp.gluegen:gluegen-rt-main:2.3.2'
+}
